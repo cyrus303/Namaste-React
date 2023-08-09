@@ -7,34 +7,40 @@
 // Manipulate the HTML DOM using React
 
 // Create nested React Elements
-// const heading = React.createElement(
-//   "h1",
-//   {
-//     id: "title",
-//     style: {
-//       background:"red",
-//     },
-//     className:"title"
-//   },
-//   "heading"
-// );
-// const heading1 = React.createElement(
-//   "h1",
-//   {
-//     id: "title",
-//   },
-//   "heading1"
-// );
+const heading = React.createElement(
+  'h1',
+  {
+    id: 'title',
+    style: {
+      background: 'red',
+    },
+    className: 'title',
+  },
+  'heading'
+);
 
-// const container = React.createElement(
-//   "div",
-//   {
-//     id: "container",
-//   },
-//   [heading, heading1]
-// );
+const heading1 = React.createElement(
+  'h1',
+  {
+    id: 'title',
+    class: 'title',
+  },
+  'heading1'
+);
 
-// // create root using createRoot
-// const root = ReactDOM.createRoot(document.getElementById("root"));
-// // passing react element inside root
-// root.render(container);
+const container = React.createElement(
+  'div',
+  {
+    id: 'container',
+  },
+  [
+    heading,
+    heading1,
+    React.createElement('h2', {}, 'heading 2 nested'),
+  ]
+);
+
+// create root using createRoot
+const root = ReactDOM.createRoot(document.getElementById('root'));
+// passing react element inside root
+root.render(container);
