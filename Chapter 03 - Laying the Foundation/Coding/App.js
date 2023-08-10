@@ -23,19 +23,22 @@
  * Transitive Dependencies
  */
 
-// imported react and reactdom from nodemodule folder
-// import {React, createElement as ce} from 'react';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-const heading = React.createElement(
-  'h1',
-  {id: 'heading'},
-  'NamasteElement'
+const Title = () => (
+  <h1 className="title">React Functional Component</h1>
 );
 
-const JsxHeading = <h1 id="heading">Hello Sachin</h1>;
+const HeadingComponent = () => (
+  <div className="container">
+    <Title />
+    <Title></Title>
+    {Title()}
+  </div>
+);
+
+const heading = <h1>hello head</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(JsxHeading);
+root.render(<HeadingComponent />);

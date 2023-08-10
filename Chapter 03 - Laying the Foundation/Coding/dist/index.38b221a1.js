@@ -2963,27 +2963,58 @@ try {
  * Zero Config
  * Tree shaking
  * Transitive Dependencies
- */ // imported react and reactdom from nodemodule folder
-// import {React, createElement as ce} from 'react';
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+ */ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-const heading = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "heading"
-}, "NamasteElement");
-const JsxHeading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-    id: "heading",
-    children: "Hello Sachin"
+const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        className: "title",
+        children: "React Functional Component"
+    }, void 0, false, {
+        fileName: "Chapter 03 - Laying the Foundation/Coding/App.js",
+        lineNumber: 30,
+        columnNumber: 3
+    }, undefined);
+_c = Title;
+const HeadingComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "Chapter 03 - Laying the Foundation/Coding/App.js",
+                lineNumber: 35,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "Chapter 03 - Laying the Foundation/Coding/App.js",
+                lineNumber: 36,
+                columnNumber: 5
+            }, undefined),
+            Title()
+        ]
+    }, void 0, true, {
+        fileName: "Chapter 03 - Laying the Foundation/Coding/App.js",
+        lineNumber: 34,
+        columnNumber: 3
+    }, undefined);
+_c1 = HeadingComponent;
+const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+    children: "hello head"
 }, void 0, false, {
     fileName: "Chapter 03 - Laying the Foundation/Coding/App.js",
-    lineNumber: 37,
-    columnNumber: 20
+    lineNumber: 41,
+    columnNumber: 17
 }, undefined);
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(JsxHeading);
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeadingComponent, {}, void 0, false, {
+    fileName: "Chapter 03 - Laying the Foundation/Coding/App.js",
+    lineNumber: 44,
+    columnNumber: 13
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "HeadingComponent");
 
   $parcel$ReactRefreshHelpers$0f94.postlude(module);
 } finally {
